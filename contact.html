@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Catherine Nduku</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="index.html" class="logo">Catherine Nduku</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+            <label for="menu-toggle" class="menu-button" aria-hidden="true">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out to me using the form below:</p>
+
+        <div class="contact-layout">
+            <form class="contact-form" action="#" method="post">
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="You@example.com" required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone (optional):</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g. 07912 345 678">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message</legend>
+                    <p>
+                        <label for="subject">Subject:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Support Request</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your Message here (at least 50 characters)" required></textarea>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                        <label for="newsletter" class="inline-label">Subscribe to our newsletter</label>
+                    </p>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <aside class="contact-sidebar">
+                <section>
+                    <h2>Find Me Online</h2>
+                    <ul>
+                        <li><a href="https://github.com/Ndush-gif" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    </ul>
+                    <p>Email: <a href="mailto:ndukucatherine211@gmail.com">ndukucatherine211@gmail.com</a></p>
+                </section>
+
+                <section>
+                    <h2>Location</h2>
+                    <p>Based in Nairobi, Kenya (East Africa Time, UTC+3).</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Catherine Nduku</p>
+    </footer>
+</body>
+</html>

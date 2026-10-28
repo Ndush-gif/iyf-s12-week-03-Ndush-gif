@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .flex-card {
+            flex: 1 1 250px;
+            padding: 1.5rem;
+            border: 1px solid var(--color-muted);
+            border-radius: 8px;
+            background-color: white;
+        }
+        .site-footer {
+    margin-top: 2rem;
+    padding: 2rem 1.5rem 1rem;
+    background-color: var(--color-primary-dark);
+    color: white;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footer-column h3 {
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.site-footer a {
+    color: white;
+}
+
+.site-footer a:hover {
+    color: var(--color-primary-light);
+}
+
+.footer-copyright {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-primary-light);
+    text-align: center;
+    font-size: var(--font-sm);
+}
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Flexbox Practice</h1>
+
+        <h2>Exercise 2: Card Row</h2>
+        <div class="card-row">
+            <div class="flex-card">
+                <h3>Crocheting</h3>
+                <p>I make handmade pieces to relax and practice patience.</p>
+            </div>
+            <div class="flex-card">
+                <h3>Web Development</h3>
+                <p>I'm learning HTML and CSS to build my own portfolio website, one lesson at a time, and this card has more text than the others on purpose.</p>
+            </div>
+            <div class="flex-card">
+                <h3>Reading</h3>
+                <p>I like learning new things from books.</p>
+        </div>
+         <footer class="site-footer">
+    <div class="footer-columns">
+        <div class="footer-column">
+            <h3>About</h3>
+            <p>Catherine Nduku. I'm learning web development and building my portfolio.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Email: ndukucatherine211@gmail.com</p>
+            <p>Nairobi, Kenya</p>
+        </div>
+    </div>
+    <p class="footer-copyright">&copy; 2026 Catherine Nduku. All rights reserved.</p>
+</footer>
+    </main>
+</body>
+</html>
