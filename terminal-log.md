@@ -67,4 +67,3 @@
    - 85  grep -rli "contact" . --include="*.html" --include="*.css"
    - 86  wc -l style.css
    - 87  history | tail -n 10
-   
