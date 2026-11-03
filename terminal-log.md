@@ -67,3 +67,18 @@
    - 85  grep -rli "contact" . --include="*.html" --include="*.css"
    - 86  wc -l style.css
    - 87  history | tail -n 10
+
+## 6.1 Git Basics
+
+### Setup
+- `git config --global --list` — showed `user.name=Catherine Nduku` and `user.email=ndukucatherine211@gmail.com`. My first attempt failed because I typed the command twice on one line (`--listgit`), so I retyped it.
+
+### Practice repo (`~/git-practice`)
+- `git init` — created an empty repository.
+- `touch index.html style.css` then `git status` — the files showed as untracked.
+- `git add ..` — failed with `fatal: '..' is outside repository`, because `..` is the folder above. I used `git add .` instead.
+- `git commit -m "Add: initial portfolio structure"` — made the first commit (2 files changed).
+- `git log` — showed my commit with my name and email.
+- `git pull origin main` — failed because the practice repo has no remote called `origin`.
+
+### Commits in my week-03 repo
