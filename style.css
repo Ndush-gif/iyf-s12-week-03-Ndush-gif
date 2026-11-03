@@ -94,7 +94,7 @@ button:hover {
 
 .navbar a:hover {
     color: var(--color-primary-light);
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .logo {
