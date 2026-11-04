@@ -23,7 +23,7 @@ echo "Project $PROJECT_NAME created successfully!"
 
 ### Script 1: new-project.sh
 - Created `new-project.sh` in my week-03 repo. It takes a project name as `$1` and builds a folder structure.
-- `chmod +x new-project.sh` — my first attempt failed with `bash: [200~chmod: command not found`, because extra characters were added when I pasted the command.
+- `chmod +x new-project.sh` — my first attempt failed with `bash: [200~chmod: command not found`, because extra characters were added when I pasted the command. 
 - `cd ~/terminal-practice` then `pwd` — printed `/c/Users/PC/terminal-practice`. I ran the script from my scratch folder, not my repo.
 - `bash ".../new-project.sh" my-awesome-app` — printed `Project my-awesome-app created successfully!`
 - `ls -R my-awesome-app` — listed the folders it created:
