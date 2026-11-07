@@ -111,3 +111,28 @@
 - `git log --graph` opened a pager that I could not leave until I pressed `q`.
 - I typed two commands on one line, such as `git config --global --listgit config ...`, and Git rejected them.
 - I have two copies of the repo on two computers, so I ran `git pull` before working to keep them in step.
+
+## 6.3 GitHub Remote Workflow
+
+### Exercise 1: Push to GitHub
+- `git remote -v` — showed `origin` pointing at `https://github.com/Ndush-gif/iyf-s12-week-03-Ndush-gif.git` for both fetch and push, so my repo was already connected to GitHub.
+- `git push -u origin main` — printed `branch 'main' set up to track 'origin/main'` and `Everything up-to-date`, because I had already pushed everything.
+
+### Exercise 2: Collaboration simulation
+- `cd ~` then `git clone https://github.com/Ndush-gif/iyf-s12-week-03-Ndush-gif.git week03-clone` — cloned my repo into a separate folder to pretend to be a second computer.
+- `touch .gitignore` then `git status` — the new file showed as untracked.
+- `git add .gitignore` then `git commit -m "Add: gitignore file"` — made commit `22f249a` (1 file changed, 14 insertions).
+- `git push origin main` — pushed it to GitHub (`2d7f1e5..22f249a  main -> main`).
+- Back in my original repo, `git fetch origin` printed nothing. Then `git status` said `Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded`. This showed me that fetch downloads the new commit but does not change my files.
+- `git pull origin main` — TODO: it printed `Already up to date.`, but `ls -a` then showed `.gitignore`. Say honestly what I think happened (for example, VS Code may have synced in the background), or that I am not sure.
+- `ls -a` — showed the hidden file `.gitignore` among my files.
+
+### Exercise 3: .gitignore
+- `touch debug.log notes.tmp` then `git status` — printed `nothing to commit, working tree clean`, so neither file was listed.
+- `git check-ignore -v debug.log` — printed `.gitignore:13:*.log     debug.log`, showing that line 13 of my `.gitignore` is the rule that ignores it.
+- `rm debug.log notes.tmp` — deleted the two test files.
+
+### Mistakes and what I learned
+- I pasted a `cd` command and the terminal added extra characters, giving `bash: [200~cd: command not found`. I typed it by hand instead.
+- `rm -r week03-clone` asked about every write-protected file in the `.git` folder. TODO: add what I did (for example, cancelled with `Ctrl + C` and used `rm -rf` after checking `pwd`).
+- TODO: one sentence on what I learned, such as the difference between `git fetch` and `git pull`, or that `.gitignore` only affects files Git is not already tracking.
