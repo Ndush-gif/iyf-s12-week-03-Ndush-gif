@@ -82,3 +82,32 @@
 - `git pull origin main` — failed because the practice repo has no remote called `origin`.
 
 ### Commits in my week-03 repo
+
+## 6.2 Branching and Merging
+
+### Exercise 1: Create and use branches
+- View current branches: git branch
+- Create new branch: git branch feature/contact-form
+- Switch to new branch: git checkout feature/contact-form
+- OR (newer syntax): git switch feature/contact-form
+- Create and switch in one command: git checkout -b feature/new-header
+
+### Exercise 2: Branch workflow
+- I created `feature/about-page`, changed the skills list in `about.html` (commit `6789cea` "Update: skills list to include Command Line"), and merged it into `main` (commit `7eb8126` "Update: merge about page changes").
+
+### Exercise 3: Merge conflict
+- Created two branches from `main`, `feature/about-intro-a` and `feature/about-intro-b`, and changed the same paragraph in `about.html` on each. Version A was commit `cca0853`, and version B was commit `cd1e451`.
+- `git switch main`, then `git merge --no-ff feature/about-intro-a -m "Update: merge about intro version A"` — this went through cleanly ("Merge made by the 'ort' strategy").
+- `git merge feature/about-intro-b` — printed `CONFLICT (content): Merge conflict in about.html` and `Automatic merge failed`. My prompt changed to `(main|MERGING)`.
+- `git status` — listed `about.html` under "Unmerged paths" as `both modified`.
+- I opened `about.html`, edited the paragraph to one sentence, removed the conflict markers, and committed. The merge commit is `956f5c0`.
+- `grep -n "<<<<<<<\|=======\|>>>>>>>" about.html` — printed nothing, so no markers were left.
+- `git branch -d feature/about-intro-a feature/about-intro-b` — deleted both merged branches.
+- `git push origin --delete feature/about-intro-a feature/about-intro-b feature/about-page` — deleted them on GitHub too.
+- `git rm tyle.css` — removed a misspelled copy of my stylesheet. `ls` no longer showed it.
+
+### Mistakes and what I learned
+- I started a commit message with a quote and never closed it, so the terminal showed `>` and swallowed my next commands. I pressed `Ctrl + C` to cancel and retyped it on one line.
+- `git log --graph` opened a pager that I could not leave until I pressed `q`.
+- I typed two commands on one line, such as `git config --global --listgit config ...`, and Git rejected them.
+- I have two copies of the repo on two computers, so I ran `git pull` before working to keep them in step.
