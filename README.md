@@ -7,8 +7,7 @@ A responsive multi-page portfolio website (home, about, projects and contact pag
 [View Live Site](https://ndush-gif.github.io/iyf-s12-week-03-Ndush-gif/)
 
 ## Screenshot
-
-![Home page of my portfolio](./images/Screenshots/myportfolio.png)
+<img src="./images/Screenshots/myportfolio.png" alt="Home page of my portfolio" width="200">
 
 ## Features
 
