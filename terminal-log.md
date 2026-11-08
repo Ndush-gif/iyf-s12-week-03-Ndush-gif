@@ -177,3 +177,33 @@
 
 ### What I learned
 - I learned how to find a specific file using the `find . -name "*"` command, how to find modified  e.g within 7 days (`find . -type f -mtime -7 -not -path "./.git/*"`), how to search a specific word like flex in css (`grep -rn "flex" --include="*.css" .`) and how to count times an element appears in a specific file eg `div` in html file(`grep -o "div" *.html | wc -l` ).
+
+## Daily Challenge 3: Boilerplate Script
+
+- Created `create-html.sh` in my repo. It takes a page name as `$1` and writes an HTML5 starter file with the viewport meta tag, a stylesheet link and a script tag.
+- `chmod +x create-html.sh` then `ls -l create-html.sh` — the permissions showed `-rwxr-xr-x`, so the script is executable.
+- `cd ~/terminal-practice` then `pwd` — printed `/c/Users/PC/terminal-practice`. I tested the script in my scratch folder so my repo stayed clean.
+- `bash ".../create-html.sh" test-page` — printed `Created test-page.html`.
+- `ls` — listed `test-page.html` alongside my other practice folders.
+- `cat test-page.html` — printed a full HTML page with `<title>test-page</title>` and `<h1>test-page</h1>`, so `$FILE_NAME` was filled in by the script.
+- Ran the same command again — printed `test-page.html already exists, not overwriting it`, so the script will not overwrite an existing file.
+- Ran the script with no name — printed `Usage: ./create-html.sh page-name`.
+- `rm test-page.html` — deleted the test file.
+- `git add create-html.sh` printed a warning that `LF will be replaced by CRLF`. Then `git commit -m "Add: HTML boilerplate script"` (commit `50ec573`) and `git push origin main`.
+
+### What I learned
+- EOF means end of file.It is a marker, condition, or signal in computer operating systems and programming languages that indicates no more data can be read from a file, stream, or input source.
+
+## Daily Challenge 4: Git Commit Message Practice
+
+- `git --no-pager log --format=%s -12` — listed my last 12 commit messages. Most followed the `Type: description` format, such as `Add: HTML boilerplate script`.
+- `git log --format=%s | grep -vE '^(Add|Fix|Update|Remove|Refactor|Style|Docs): '` — listed the messages that do not match the format. They were the automatic `Merge branch 'main' of ...` commits that Git made when pulling, `styles: add navigation hover underline`, ` Docs: add task 5.3` (which has a leading space), and my first commits from before I knew the format.
+- Five commit messages I am happy with: 
+1. `Add: HTML boilerplate script`
+2. `Update: adjust image markdown`
+3. `Update: change header title to 'My Portfolio'`
+4. `Update: Change screenshot image path in README`
+5. `Update: Revise README for Week 03 Project`.
+- Some of my messages are longer than 50 characters, for example `Update: add daily challenge projects for terminal navigation and file operations`, so next time I will shorten them.
+- I cannot change the commits I already pushed, because rewriting pushed history would need a force-push.
+
