@@ -135,4 +135,18 @@
 ### Mistakes and what I learned
 - I pasted a `cd` command and the terminal added extra characters, giving `bash: [200~cd: command not found`. I typed it by hand instead.
 - `rm -r week03-clone` asked about every write-protected file in the `.git` folder. TODO: add what I did (for example, cancelled with `Ctrl + C` and used `rm -rf` after checking `pwd`).
-- TODO: one sentence on what I learned, such as the difference between `git fetch` and `git pull`, or that `.gitignore` only affects files Git is not already tracking.
+
+## Daily Challenge 1: Terminal-Only Project Setup
+
+- `cd ~/terminal-practice` then `pwd` — printed `/c/Users/PC/terminal-practice`, so I worked in my scratch folder and not in my repo.
+- `mkdir -p daily-challenge-1/src/css daily-challenge-1/src/js` — meant to create the folders. I accidentally typed the command twice on one line, so it also created a stray empty folder called `jsmkdir`.
+- `touch daily-challenge-1/src/index.html daily-challenge-1/src/css/style.css daily-challenge-1/src/js/app.js daily-challenge-1/README.md` — created the four empty files in one command.
+- `echo "# daily-challenge-1" > daily-challenge-1/README.md` — wrote a title into the README without opening an editor.
+- `echo "<h1>Hello from the terminal</h1>" > daily-challenge-1/src/index.html` — wrote a line into the HTML file.
+- `ls -R daily-challenge-1` — listed the whole tree and showed the stray `jsmkdir/` folder.
+- `rmdir daily-challenge-1/src/jsmkdir` — TODO: removed the stray empty folder. Say what `ls -R` showed afterwards.
+- `find daily-challenge-1 -type f` — listed exactly four files: `README.md`, `src/css/style.css`, `src/index.html` and `src/js/app.js`.
+- `cat daily-challenge-1/README.md` and `cat daily-challenge-1/src/index.html` — printed `# daily-challenge-1` and `<h1>Hello from the terminal</h1>`.
+
+### What I learned
+- `rmdir` only deletes empty folders, or that typing a command twice on one line turns the second copy into extra arguments.
