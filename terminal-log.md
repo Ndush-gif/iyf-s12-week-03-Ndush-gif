@@ -150,3 +150,30 @@
 
 ### What I learned
 - `rmdir` only deletes empty folders, or that typing a command twice on one line turns the second copy into extra arguments.
+## Daily Challenge 1: Terminal-Only Project Setup
+
+- `cd ~/terminal-practice` then `pwd` — printed `/c/Users/PC/terminal-practice`, so I worked in my scratch folder and not in my repo.
+- `mkdir -p daily-challenge-1/src/css daily-challenge-1/src/js` — meant to create the folders, but I typed the command twice on one line, so it also created a stray empty folder called `jsmkdir`.
+- `touch daily-challenge-1/src/index.html daily-challenge-1/src/css/style.css daily-challenge-1/src/js/app.js daily-challenge-1/README.md` — created the four empty files.
+- `echo "# daily-challenge-1" > daily-challenge-1/README.md` and `echo "<h1>Hello from the terminal</h1>" > daily-challenge-1/src/index.html` — wrote one line into each file without an editor.
+- `find daily-challenge-1 -type f` — listed exactly four files.
+- `cat daily-challenge-1/README.md` and `cat daily-challenge-1/src/index.html` — printed `# daily-challenge-1` and `<h1>Hello from the terminal</h1>`.
+- `rmdir daily-challenge-1/src/jsmkdir` — removed the stray empty folder. `ls -R daily-challenge-1` then showed only `css/`, `index.html` and `js/` inside `src`, matching the target structure.
+- What I learned: TODO
+
+## Daily Challenge 2: Find Command Mastery
+
+1. **Find all CSS files**
+   - `find . -name "*.css"` — printed one file, `./style.css`.
+2. **Find files modified in the last 7 days**
+   - `find . -type f -mtime -7 -not -path "./.git/*"` — listed 8 files: `.gitignore`, `about.html`, `images/Screenshots/myportfolio.png`, `index.html`, `new-project.sh`, `README.md`, `style.css` and `terminal-log.md`. I excluded the `.git` folder because its files change with every commit.
+3. **Search for "flex" in all CSS files**
+   - `grep -rn "flex" --include="*.css" .` — printed 8 lines, from `style.css` lines 82, 83, 128, 136, 146, 147, 283 and 296.
+   - `grep -rn "flex" --include="*.css" . | wc -l` — printed `8`.
+   - Six of the lines are flex properties (`display: flex`, `flex-wrap`, `flex-direction`), and two (lines 283 and 296) are the class name `.flex-card`, which matches because the word "flex" is part of it.
+4. **Count "div" in my HTML files**
+   - `grep -o "div" *.html | wc -l` — printed `29` (every occurrence).
+   - `grep -c "div" *.html` — counted lines per file: `about.html` 0, `box-model-practice.html` 3, `contact.html` 2, `flexbox-practice.html` 15, `grid-practice.html` 4, `index.html` 2 and `projects.html` 2. That adds up to 28 lines, one fewer than 29 occurrences, so one line has "div" twice.
+
+### What I learned
+- I learned how to find a specific file using the `find . -name "*"` command, how to find modified  e.g within 7 days (`find . -type f -mtime -7 -not -path "./.git/*"`), how to search a specific word like flex in css (`grep -rn "flex" --include="*.css" .`) and how to count times an element appears in a specific file eg `div` in html file(`grep -o "div" *.html | wc -l` ).
