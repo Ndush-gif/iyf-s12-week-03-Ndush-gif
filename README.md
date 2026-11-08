@@ -65,6 +65,12 @@ iyf-s12-week-03-Ndush-gif/
 - [ ] Connect the contact form to a service that actually receives messages
 - [ ] Add a dark mode
 
+## Collaboration
+- **Partner:** [@anncathy-commits](https://github.com/anncathy-commits)
+- **Pair repo:** https://github.com/Ndush-gif/iyf-s12-week-03-pair-Ndush-gif
+- **PR I opened:** [#4 Revise: README for Pair Collaboration Lab](https://github.com/Ndush-gif/iyf-s12-week-03-pair-Ndush-gif/pull/4) (merged, approved by my partner)
+
+
 ## Contact
 
 - Email: ndukucatherine211@gmail.com
