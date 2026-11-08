@@ -209,4 +209,4 @@
 
 ## Daily Challenge 5: Upgrade My Profile README
 - Link to my upgraded profile README:
-- [My Profile README](https://github.com/Ndush-gif/Ndush-gif/edit/main/README.md)
+- [My Profile](https://github.com/Ndush-gif)
