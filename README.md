@@ -8,7 +8,7 @@ A responsive multi-page portfolio website (home, about, projects and contact pag
 
 ## Screenshot
 
-![Home page of my portfolio](./images/screenshot.png)
+![Home page of my portfolio](./images/Screenshots/myportfolio.png)
 
 ## Features
 
